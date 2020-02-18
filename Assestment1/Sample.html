@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample</title>
+    <link   rel="stylesheet" type="text/css" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <script type="text/javascript" src="items.json"> </script>
+</head>
+<body>
+          <h1>
+            JDM Garage Shop
+          </h1>
+
+<div class="navbar">
+      <a class="active" href="#"><i class="fa fa-fw fa-home"></i>Home</a> 
+      <a href="#"><i class="fa fa-fw fa-search"></i> Search</a>
+      <a href="#"><i class="fas fa-tools"></i> Parts</a>  
+      <a href="#"><i class="fas fa-wrench"></i> Service</a>
+      <a href="#"><i class="fa fa-fw fa-envelope"></i> Contact</a> 
+      <a href="#"><i class="fas fa-question-circle"></i> FAQ</a>
+<div class="cart">
+  <a href="#"><i class="fa fa-shopping-cart"></i> Cart</a>  
+   </div>
+</div>
+  
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+      <div class="numbertext"></div>
+      <img src="r34.jpg" style="width:100%">
+      <div class="text">Nissan GTR R34 </div>
+  </div>
+  
+<div class="mySlides fade">
+      <div class="numbertext"></div>
+        <img src="r35.jpg" style="width:100%">
+      <div class="text">Nissan GTR R35</div>
+  </div>
+  
+<div class="mySlides fade">
+      <div class="numbertext"></div>
+      <img src="s15.jpg" style="width:100%">
+      <div class="text">Nissan Silvia S15</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext"></div>
+    <img src="mk4.jpg" style="width:100%">
+    <div class="text">Toyota Supra Mk4</div>
+</div>
+<!--  
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  -->
+  </div>
+
+  <br>
+  
+ <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span> 
+      <span class="dot" onclick="currentSlide(2)"></span> 
+      <span class="dot" onclick="currentSlide(3)"></span>
+      <span class="dot" onclick="currentSlide(4)"></span> 
+  </div>
+  
+  <script>
+    var slideIndex = 0;
+    showSlides();
+    
+    function showSlides() {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("dot");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}    
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+      setTimeout(showSlides, 2500); 
+    }
+    </script>
+
+
+<!-- Products -->
+
+
+
+<h2>JDM CARS AVAILABLE</h2>
+
+<div class="responsive">
+  <div class="gallery">
+      <img src="mk4.jpg" width="600" height="400">
+    </a>
+    <h3 id="itemname1"></h3>
+    <p id="price1"></p>
+    <script>
+      var obj=JSON.parse(item1)
+      document.getElementById("itemname1").innerHTML = obj.name;
+      document.getElementById("price1").innerHTML = obj.price;
+    </script>    
+    <center>
+    <button class="btn" data-id=""> Purchase</button>
+    </center>
+  </div>
+</div>
+
+
+<div class="responsive">
+  <div class="gallery">
+      <img src="r34.jpg" width="600" height="400">
+    </a>
+    <h3 id="itemname2"></h3>
+    <p id="price2"></p>
+    <script>
+      var obj=JSON.parse(item2)
+      document.getElementById("itemname2").innerHTML = obj.name;
+      document.getElementById("price2").innerHTML = obj.price;
+    </script>
+    
+    <center>
+    <button class="btn" data-id=""> Purchase</button>
+    </center>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+      <img src="s15.jpg" width="600" height="400">
+    </a>
+    <h3 id="itemname3"></h3>
+  <p id="price3"></p>
+  <script>
+    var obj=JSON.parse(item3)
+    document.getElementById("itemname3").innerHTML = obj.name;
+    document.getElementById("price3").innerHTML = obj.price;
+  </script>
+  
+    <center>
+    <button class="btn" data-id=""> Purchase</button>
+    </center>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+      <img src="r35.jpg" width="600" height="400">
+    </a>
+    <h3 id="itemname4"></h3>
+  <p id="price4"></p>
+  <script>
+    var obj=JSON.parse(item4)
+    document.getElementById("itemname4").innerHTML = obj.name;
+    document.getElementById("price4").innerHTML = obj.price;
+  </script>
+  
+    <center>
+    <button class="btn" data-id=""> Purchase</button>
+    </center>
+  </div>
+</div> 
+<div class="responsive">
+  <div class="gallery">
+      <img src="nsx.jpg" width="600" height="400">
+    </a>
+    <h3 id="itemname5"></h3>
+  <p id="price5"></p>
+  <script>
+    var obj=JSON.parse(item5)
+    document.getElementById("itemname5").innerHTML = obj.name;
+    document.getElementById("price5").innerHTML = obj.price;
+  </script>
+  
+    <center>
+      <button class="btn" data-id=""> Purchase</button>
+      </center>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+      <img src="s2000.jpg" width="600" height="400">
+    </a>
+    <h3 id="itemname6"></h3>
+  <p id="price6"></p>
+  <script>
+    var obj=JSON.parse(item6)
+    document.getElementById("itemname6").innerHTML = obj.name;
+    document.getElementById("price6").innerHTML = obj.price;
+  </script>
+  
+    <center>
+      <button class="btn" data-id=""> Purchase</button>
+      </center>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+      <img src="rx7.jpg" width="600" height="400">
+    </a>
+    <h3 id="itemname7"></h3>
+  <p id="price7"></p>
+  <script>
+    var obj=JSON.parse(item7)
+    document.getElementById("itemname7").innerHTML = obj.name;
+    document.getElementById("price7").innerHTML = obj.price;
+  </script>
+  
+    <center>
+      <button class="btn" data-id=""> Purchase</button>
+      </center>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+      <img src="350z.jpg" width="600" height="400">
+    </a>
+     <h3 id="itemname8"></h3>
+     <p id="price8"></p>
+     <script>
+      var obj=JSON.parse(item8)
+      document.getElementById("itemname8").innerHTML = obj.name;
+      document.getElementById("price8").innerHTML = obj.price;
+    </script>    
+    <center>
+      <button class="btn" data-id=""> Purchase</button>
+      </center>
+  </div>
+</div>
+
+<!-- <div class = "razer-mouse"> 
+  <img src = "Items/RAZER_RZ01-02410100-R3Ml_NAGA_TRINITY_G.WIRED_MOUSE.jpg" width="200px" height="200px"> 
+  <h3 id="itemname6"></h3>
+  <p id="price6"></p>
+  <script>
+      var obj=JSON.parse(item6)
+      document.getElementById("itemname6").innerHTML = obj.name;
+      document.getElementById("price6").innerHTML = obj.price;
+  </script>
+  <button type="button">Add to cart</button>
+</div> -->
+
+
+
+<div class="clearfix"></div>
+
+<div style="padding:6px;">
+  <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates cum repellendus quidem tempora ratione saepe? Repellat nam atque, exercitationem alias quidem similique facilis maxime id sunt! Eaque numquam saepe perferendis.</h5>
+  <h6>This is my SampleSite for the assestment.</h6>
+</div>
+</body>
+</html>

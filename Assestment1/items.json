@@ -1,0 +1,8 @@
+item1 = '{"name":"Toyota Supra Mk4","price":"₱960,000.00"}'
+item2 = '{"name":"Nissan GTR R34","price":"₱1,680,000.00"}'
+item3 = '{"name":"Nissan Silvia S15","price":"₱750,000.00"}'
+item4 = '{"name":"Nissan GTR R35","price":"₱5,500,000.00"}'
+item5 = '{"name":"Honda Acura NSX","price":"₱2,600,000.00"}'
+item6 = '{"name":"Honda S2000","price":"₱1,550,000.00"}'
+item7 = '{"name":"Mazda Rx7","price":"₱1,600,000.00"}'
+item8 = '{"name":"Nissan 350z","price":"₱1,100,000.00"}'
